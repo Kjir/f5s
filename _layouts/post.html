@@ -2,13 +2,14 @@
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="it"><!--<![endif]-->
 <head>
 {% include head.html %}
 </head>
 
 <body id="post" {% if page.image.feature %}class="feature"{% endif %}>
 
+{% include facebook-comment-setup.html %}
 {% include browser-upgrade.html %}
 {% include header.html %}
 
@@ -31,8 +32,9 @@
         {% if page.share != false %}{% include social-share.html %}{% endif %}
       </footer>
     </div><!-- /.entry-content -->
-    {% include author.html %}
     {% if page.comments != false and site.disqus_shortname %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
+    {% if page.comments != false and site.facebook_appid %}<section id="fb_thread"><div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-numposts="5"></div></section><!-- /#fb_thread -->{% endif %}
+    {% include author.html %}
     {% if site.related_posts.size > 0 %}{% include read-more.html %}{% endif %}
   </article>
 </div><!-- /#main -->

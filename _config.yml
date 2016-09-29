@@ -1,14 +1,18 @@
-title:            Blog Title
-description:      Describe your website here.
+title:            Movimento Fermignano
+description:      Pagina ufficiale del Movimento 5 Stelle di Fermignano
 # put your disqus here
-disqus_shortname: 
+# disqus_shortname:
+facebook_appid: 1015027788580485
 reading_time:     true # if true, shows the estimated reading time for a post
 words_per_minute: 200
+big_logo:         logo-web-cert.jpg # logo right after the menu on homepage
 logo:             images/logo.png # logo visible in the topbar
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 
-url: http://aronbordin.com/neo-hpstr-jekyll-theme
+# url: http://www.fermignano5stelle.it
+url: http://localhost:4000
+# url: http://f5s.sbisinger.net
 
 # draw your top menu here
 # each item must have a title and a url.
@@ -18,47 +22,36 @@ url: http://aronbordin.com/neo-hpstr-jekyll-theme
 menu:
   - title: 'Home'
     url: '/'
-  - title: 'Fork'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
-  - title: 'Install'
-    url: '/theme-setup/'
-  - title: 'Tags'
-    url: '/tags'
-  - title: 'Categories'
+  - title: 'Chi siamo'
+    url: '/chi-siamo/'
+  - title: 'Temi'
     url: '/categories'
     type: 'categories'
-  - title: 'Favorites'
-    url: '#'
-    submenu:
-      - title: 'Code Highlighter'
-        url: '/intro/code-highlighting-post/'
-      - title: 'Sample Post'
-        url: '/intro/sample-post/'
+  - title: 'Contattaci'
+    url: '/contattaci/'
 
 # Owner/author information
 owner:
-  name:           Your name
-  site:           http://aronbordin.com
-  avatar:         images/avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  name:           Movimento 5 Stelle Fermignano
+  site:           http://www.fermignano5stelle.it
+  avatar:         images/logo.png
+  bio:            "Il Movimento 5 Stelle di Fermignano è un gruppo di cittadini
+      stufi della solita politica che hanno deciso di prendere la situazione in
+      mano."
+  email:          info@fermignano5stelle.com
   # Twitter nick for use in Twitter cards and follow button.
-  twitter: aron_bordin # if no twitter in this config, the twitter follow button will be removed
-  # GitHub nick for use in follow button in author block.
-  github: aron-bordin
+  twitter: #aron_bordin # if no twitter in this config, the twitter follow button will be removed
 
 # Twitter account associated with the site if different from owner/author twitter account.
 # Used in Twitter cards.
-twitter: 
+twitter: m5sFermignano
 
 # Social networking links used in author block underneath posts. Update and remove as you like.
 social:
-  - title: "github"
-    url: "https://github.com/aron-bordin"
-  - title: "linkedin"
-    url: "https://br.linkedin.com/in/aronbordin"
   - title: "youtube"
-    url: "https://www.youtube.com/channel/UCfnSek-9HPWOx5e2pH7VFgg"
+    url: "https://www.youtube.com/channel/UCnkFmD0l-bzIIauwj4CfxKQ"
+  - title: "facebook"
+    url: "https://www.facebook.com/fermignano5stelle"
 # Background image to be tiled on all pages
 background:
 
@@ -69,8 +62,8 @@ google_verify:
 bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-locale:      en_US
+timezone:    Europe/Rome
+locale:      it_IT
 future:      true
 highlighter: rouge
 markdown:    kramdown
@@ -81,7 +74,7 @@ sass:
   style: compressed
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+permalink:   /:slug/
 
 # Amount of post to show on home page
 paginate: 5

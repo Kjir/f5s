@@ -50,3 +50,9 @@
 {% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.url }}/images/{{ background }}{% endcapture %}{% endunless %}
 <style type="text/css">body {background-image:url({{ background }});}</style>
 {% endif %}
+
+{% if site.big_logo %}
+{% capture big_logo %}{{ site.big_logo }}{% endcapture %}
+{% unless big_logo contains 'http://' or big_logo contains 'https://' %}{% capture big_logo %}{{ site.url }}/images/{{ big_logo }}{% endcapture %}{% endunless %}
+<style type="text/css">.header-logo {background-image:url({{ big_logo }});}</style>
+{% endif %}
